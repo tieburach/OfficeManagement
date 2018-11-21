@@ -1,0 +1,30 @@
+﻿<Window x:Class="OfficesManagement.ListOfPersonsForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OfficesManagement"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Lista pracowników" Width="720" Height="400">
+    <Window.Resources>
+        <local:PersonsList x:Key="MyPersons"/>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer  
+                  VerticalScrollBarVisibility="Auto">
+            <DataGrid Grid.Column="0" Grid.Row="0" IsReadOnly="True" x:Name="Sampledatagrid" AutoGenerateColumns="True" MinColumnWidth="140" ColumnWidth="140"
+                  ItemsSource="{DynamicResource MyPersons}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Width="720" />
+        </ScrollViewer>
+        <Button Grid.Row="1" Grid.Column="0" Command="{Binding RemovePersonsButton}" Style="{StaticResource InformButton}">Usuń zaznaczone</Button>
+    </Grid>
+</Window>

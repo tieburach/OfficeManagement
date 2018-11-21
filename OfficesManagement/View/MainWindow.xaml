@@ -1,0 +1,29 @@
+﻿<Window x:Class="OfficesManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="MainWindow" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="pack://application:,,,/Resource/logo.png">
+        </Image>
+
+        <Button Grid.Row="1" Style="{StaticResource InformButton}" Command="{Binding ShowPersonListButton}">Wyświetl listę osób</Button>
+        <Button Grid.Row="2" Style="{StaticResource InformButton}" Command="{Binding AddNewPersonButton}">Dodaj nową osobę</Button>
+        <Button Grid.Row="3" Style="{StaticResource InformButton}" Command="{Binding LoadDataButton}">Załaduj dane</Button>
+        <Button Grid.Row="4" Style="{StaticResource InformButton}" Command="{Binding SaveDataButton}">Zapisz dane</Button>
+    </Grid>
+</Window>
