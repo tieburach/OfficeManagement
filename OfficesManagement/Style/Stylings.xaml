@@ -5,7 +5,8 @@
     <Color x:Key="SecondColor">#90A4AE</Color>
     <Color x:Key="ThirdColor">#ECEFF1</Color>
 
-    <SolidColorBrush x:Key="FirstColorBrush">#455A64</SolidColorBrush>
+
+        <SolidColorBrush x:Key="FirstColorBrush">#455A64</SolidColorBrush>
     <SolidColorBrush x:Key="SecondColorBrush">#90A4AE</SolidColorBrush>
     <SolidColorBrush x:Key="ThirdColorBrush">#ECEFF1</SolidColorBrush>
 
